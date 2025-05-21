@@ -10,11 +10,13 @@ from kamihi import bot
 def {{ action_name_snake_case }}() -> str:
     """
     {{ action_name }} action.
+    {% if action_description %}
 
-    This action does something.
-
+    {{ action_description }}
+    {% endif %}
     Returns:
         str: The result of the action.
+
     """
     # Your action logic here
     return "Hello, world!"
