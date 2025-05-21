@@ -7,14 +7,14 @@ from kamihi import bot
 
 
 @bot.action{% if action_description %}(description="{{ action_description }}"){% endif %}
-def {{ action_name_snake_case }}() -> str:
+async def {{ action_name_snake_case }}() -> str:
     """
     {{ action_name }} action.
     {% if action_description %}
 
     {{ action_description }}
     {% endif %}
-    Returns:
+    Returns:#
         str: The result of the action.
 
     """
