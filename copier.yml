@@ -1,0 +1,23 @@
+_subdirectory: template
+
+action_name:
+  type: str
+  help: What is your action's name?
+  placeholder: "My action"
+  validator: >-
+    {% if not action_name.strip() %}
+    Invalid action name
+    {% endif %}
+
+action_description:
+  type: str
+  help: What does your action do in one sentence? (optional)
+  placeholder: Answers the user with their destiny.
+
+action_name_kebab_case:
+  when: false
+  default: "{{ action_name | lower | replace(' ', '-') }}"
+
+action_name_snake_case:
+  when: false
+  default: "{{ action_name | lower | replace(' ', '_') }}"

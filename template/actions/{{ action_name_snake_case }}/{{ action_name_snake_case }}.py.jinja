@@ -1,0 +1,20 @@
+"""
+{{ action_name }} action.
+"""
+
+
+from kamihi import bot
+
+
+@bot.action{% if action_description %}(description="{{ action_description }}"){% endif %}
+def {{ action_name_snake_case }}() -> str:
+    """
+    {{ action_name }} action.
+
+    This action does something.
+
+    Returns:
+        str: The result of the action.
+    """
+    # Your action logic here
+    return "Hello, world!"
